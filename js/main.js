@@ -420,7 +420,6 @@ function startQuizMode() {
         resultEl.textContent = "✅ Đúng rồi!";
         resultEl.style.color = "green";
         correctCount++;
-        setTimeout(nextItem, 700);
       } else {
         resultEl.textContent = `❌ Sai! Đáp án: ${correctAnswerText}`;
         resultEl.style.color = "red";
@@ -430,8 +429,36 @@ function startQuizMode() {
           correct: correctAnswerText,
           user: ans
         });
-        setTimeout(nextItem, 1500);
       }
+
+      if (!document.getElementById("continue-btn")) {
+        const continueBtn = document.createElement("button");
+        continueBtn.id = "continue-btn";
+        continueBtn.textContent = "➡ Continue";
+        continueBtn.style.marginTop = "12px";
+
+        resultEl.insertAdjacentElement("afterend", continueBtn);
+
+        // ----- Hàm Continue -----
+        const doContinue = () => {
+          continueBtn.remove();
+          document.removeEventListener("keydown", continueListener); // remove listener
+          nextItem();
+        };
+
+        continueBtn.onclick = doContinue;
+
+        // ----- Lắng nghe Backspace -----
+        const continueListener = (e) => {
+          if (e.code === "Backspace") {
+            e.preventDefault(); // tránh trình duyệt quay lại
+            doContinue();
+          }
+        };
+        document.addEventListener("keydown", continueListener);
+      }
+
+
     };
   }
 
