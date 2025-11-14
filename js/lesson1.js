@@ -114,11 +114,11 @@ const lesson1 = {
     { jp: "学校", hira: "がっこう", romaji: "gakkou",          eng: "school",                       viet: "trường học" },
     { jp: "大学", hira: "だいがく", romaji: "daigaku",         eng: "university",                   viet: "đại học" },
     { jp: "先生", hira: "せんせい", romaji: "sensei",          eng: "teacher / master / doctor",    viet: "giáo viên / thầy cô / bác sĩ" },
-    { jp: "日",   hira: "ひ・にち", romaji: "hi / nichi / jitsu", eng: "day / sun / Japan",          viet: "ngày / mặt trời / Nhật Bản" },
+    { jp: "日",   hira: "ひ", romaji: "hi", eng: "day / sun / Japan",          viet: "ngày / mặt trời / Nhật Bản" },
     { jp: "日本", hira: "にほん・にっぽん", romaji: "nihon / nippon", eng: "Japan",                 viet: "Nhật Bản" },
     { jp: "誕生日", hira: "たんじょうび", romaji: "tanjoubi",   eng: "birthday",                     viet: "sinh nhật" },
-    { jp: "本",   hira: "ほん・もと", romaji: "hon / moto",    eng: "book / origin / main / Japan", viet: "sách / gốc / bản / Nhật Bản" },
-    { jp: "語",   hira: "ご・かたる", romaji: "go / kataru",   eng: "language / word / to speak",   viet: "ngôn ngữ / lời / nói" },
+    { jp: "本",   hira: "ほん", romaji: "hon",    eng: "book / origin / main", viet: "sách / gốc / bản" },
+    { jp: "語",   hira: "ご", romaji: "go",   eng: "language / word / to speak",   viet: "ngôn ngữ / lời / nói" },
     { jp: "日本語", hira: "にほんご", romaji: "nihongo",       eng: "Japanese language",            viet: "tiếng Nhật" },
 
     // Các ngày trong tháng (1~10, 20)
@@ -137,7 +137,10 @@ const lesson1 = {
     // Số tuổi
     { jp: "一才", hira: "いっさい", romaji: "issai",           eng: "1 year old",                   viet: "1 tuổi" },
     { jp: "八才", hira: "はっさい", romaji: "hassai",          eng: "8 years old",                  viet: "8 tuổi" },
-    { jp: "十才", hira: "じゅっさい", romaji: "jussai",       eng: "10 years old",                 viet: "10 tuổi" }
+    { jp: "十才", hira: "じゅっさい", romaji: "jussai",       eng: "10 years old",                 viet: "10 tuổi" },
+    { jp: "一人", hira: "ひとり", romaji: "hitori", eng: "one person", viet: "1 người" },
+    { jp: "二人", hira: "ふたり", romaji: "futari", eng: "two people", viet: "2 người" },
+    { jp: "三人", hira: "さんにん", romaji: "sannin", eng: "three people", viet: "3 người" }
     ],
   grammar: [
     { 
@@ -195,4 +198,5 @@ const lesson1 = {
         viet: "N1 có phải là N2 không?"
     }
   ]
+
 };
