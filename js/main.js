@@ -770,3 +770,28 @@ musicBtn.onclick = ()=>{
 };
 
 
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const mobilePopup = document.getElementById("mobile-popup");
+
+mobileMenuBtn.onclick = () => {
+  mobilePopup.style.display = mobilePopup.style.display === "block" ? "none" : "block";
+};
+
+// Gán hành động cho mobile menu
+document.getElementById("mobile-vocab").onclick = () => {
+  tabButtons.vocab.click();
+  mobilePopup.style.display = "none";
+};
+document.getElementById("mobile-kanji").onclick = () => {
+  tabButtons.kanji.click();
+  mobilePopup.style.display = "none";
+};
+document.getElementById("mobile-grammar").onclick = () => {
+  tabButtons.grammar.click();
+  mobilePopup.style.display = "none";
+};
+document.getElementById("mobile-back").onclick = () => {
+  tabButtons.back.click();
+  mobilePopup.style.display = "none";
+};
+
